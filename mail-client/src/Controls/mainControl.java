@@ -10,6 +10,6 @@ package Controls;
  *
  * @author SaPhi
  */
-public class mailControl {
+public class mainControl {
     
 }

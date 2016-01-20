@@ -6,10 +6,15 @@
 
 package main;
 
+import Controls.newLogin;
+
 /**
  *
  * @author SaPhi
  */
 public class main {
-    
+    public static void main(String[] args) {
+        newLogin nlogin = new newLogin();
+        nlogin.run();
+    }
 }

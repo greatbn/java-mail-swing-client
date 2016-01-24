@@ -11,5 +11,4 @@ package Controls;
  * @author SaPhi
  */
 public class mainControl {
-    
 }

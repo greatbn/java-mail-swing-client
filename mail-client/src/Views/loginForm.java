@@ -10,6 +10,7 @@
  */
 package Views;
 
+import Models.userModel;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
@@ -19,7 +20,7 @@ import javax.swing.JTextField;
  * @author saphi
  */
 public class loginForm extends javax.swing.JFrame {
-
+    private userModel model;
     /** Creates new form loginForm */
     public loginForm() {
         initComponents();
@@ -44,6 +45,10 @@ public class loginForm extends javax.swing.JFrame {
 
     public JTextField getTfUsername() {
         return tfUsername;
+    }
+    public userModel getUser(){
+        model = new userModel(tfUsername.getText(), tfPassword.getText());
+        return model;
     }
     public void setMessage(String title,String message){
         JOptionPane.showMessageDialog(null, message, title, JOptionPane.INFORMATION_MESSAGE);

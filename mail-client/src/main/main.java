@@ -6,7 +6,8 @@
 
 package main;
 
-import Controls.newLogin;
+import Controls.mainControl;
+
 
 /**
  *
@@ -14,7 +15,7 @@ import Controls.newLogin;
  */
 public class main {
     public static void main(String[] args) {
-        newLogin nlogin = new newLogin();
-        nlogin.run();
+        mainControl main = new mainControl();
+        main.run();
     }
 }

@@ -60,7 +60,8 @@ public class mainControl {
             boolean empty = true;
             while(rs.next()){
              empty = false;
-            }            
+            }
+          
             return empty;
         } catch (SQLException ex) {
             Logger.getLogger(mainControl.class.getName()).log(Level.SEVERE, null, ex);
@@ -70,7 +71,8 @@ public class mainControl {
         
     }
     public void run(){
-        if(checkDataBase()){
+      
+        if(!checkDataBase()){
             inboxForm inbox = new inboxForm();
             inbox.setVisible(true);
         }

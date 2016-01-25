@@ -7,6 +7,7 @@
 package Controls;
 
 
+import Models.serverModel;
 import Models.userModel;
 import Views.configServerMailForm;
 import Views.inboxForm;
@@ -27,7 +28,8 @@ import javax.swing.JButton;
  * @author SaPhi
  */
 public class mainControl {
-    private userModel model;
+    private userModel usermodel;
+    private serverModel servermodel;
     
     // connect toi database neu table chua duoc tao thi khoi tao table de luu user la cac email va password
     public static Connection ConnectDatabase(){
@@ -94,7 +96,7 @@ public class mainControl {
                         login.setMessage("Error", "Please input your password");
                     }
                         else{
-                            model = login.getUser();
+                            usermodel = login.getUser();
                         }
                     }
                          
@@ -105,8 +107,34 @@ public class mainControl {
 
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    configServerMailForm config = new configServerMailForm();
+                    final configServerMailForm config = new configServerMailForm();
                     config.setVisible(true);
+                    JButton btNext = config.getBtNext();
+                    JButton btBack = config.getBtBack();
+                    btNext.addActionListener(new ActionListener() {
+
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            if(config.getTfServer().getText().equals("") ){
+                                config.setMessage("Error", "Please input server hostname or IP address");
+                            }
+                            else{
+                                if(config.getTfPort().getText().equals("")){
+                                    config.setMessage("Error", "Please input server port");
+                                }
+                                else{
+                                    servermodel = config.getServer();
+                                }
+                            }
+                        }
+                    });
+                    btBack.addActionListener(new ActionListener() {
+
+                        @Override
+                        public void actionPerformed(ActionEvent e) {
+                            
+                        }
+                    });
                 }
             });
         }

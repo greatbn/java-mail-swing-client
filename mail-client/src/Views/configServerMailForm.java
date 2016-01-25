@@ -11,7 +11,10 @@
 package Views;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -22,6 +25,7 @@ public class configServerMailForm extends javax.swing.JFrame {
     /** Creates new form chooseServerForm */
     public configServerMailForm() {
         initComponents();
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
     public JButton getBtBack() {
@@ -39,7 +43,9 @@ public class configServerMailForm extends javax.swing.JFrame {
     public JTextField getTfServer() {
         return tfServer;
     }
-    
+    public void setMessage(String title,String message){
+        JOptionPane.showMessageDialog(null, message, title, JOptionPane.INFORMATION_MESSAGE);
+    }
     /** This method is called from within the constructor to
      * initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is

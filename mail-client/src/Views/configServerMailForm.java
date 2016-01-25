@@ -10,18 +10,18 @@
  */
 package Views;
 
+import Models.serverModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
-import javax.swing.WindowConstants;
 
 /**
  *
  * @author saphi
  */
 public class configServerMailForm extends javax.swing.JFrame {
-
+    private serverModel model;
     /** Creates new form chooseServerForm */
     public configServerMailForm() {
         initComponents();
@@ -45,6 +45,10 @@ public class configServerMailForm extends javax.swing.JFrame {
     }
     public void setMessage(String title,String message){
         JOptionPane.showMessageDialog(null, message, title, JOptionPane.INFORMATION_MESSAGE);
+    }
+    public serverModel getServer(){
+        model = new serverModel(tfServer.getText(), Integer.parseInt(tfPort.getText()));
+        return model;
     }
     /** This method is called from within the constructor to
      * initialize the form.

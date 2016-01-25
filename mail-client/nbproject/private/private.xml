@@ -9,8 +9,9 @@
             <file>file:/C:/Users/SaPhi/Documents/GitHub/java-mail-swing-client/mail-client/src/Views/mainView.java</file>
             <file>file:/C:/Users/SaPhi/Documents/GitHub/java-mail-swing-client/mail-client/src/Views/composeMail.java</file>
             <file>file:/C:/Users/SaPhi/Documents/GitHub/java-mail-swing-client/mail-client/src/Views/loginForm.java</file>
-            <file>file:/C:/Users/SaPhi/Documents/GitHub/java-mail-swing-client/mail-client/src/Controls/newLogin.java</file>
+            <file>file:/C:/Users/SaPhi/Documents/GitHub/java-mail-swing-client/mail-client/src/Models/serverModel.java</file>
             <file>file:/C:/Users/SaPhi/Documents/GitHub/java-mail-swing-client/mail-client/src/Views/configServerMailForm.java</file>
+            <file>file:/C:/Users/SaPhi/Documents/GitHub/java-mail-swing-client/mail-client/src/Models/userModel.java</file>
         </group>
     </open-files>
 </project-private>
